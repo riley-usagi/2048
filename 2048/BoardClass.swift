@@ -114,7 +114,7 @@ class Board {
     /// Начальный массив плиток
     var tileList = [Tile]()
     
-    //
+    // Перебор всех рядов и строк в них и заполнение пустыми плитками
     for y in 0..<config.tileNumber {
       for x in 0..<config.tileNumber {
         let tile = Tile(value: 0, position: Position(x: x, y: y))
@@ -126,19 +126,27 @@ class Board {
       tileList[tile.position.x + tile.position.y * config.tileNumber] = tile
     }
     
+    /// Последняя пустая клетка
     var lastZeroTile: Tile? = nil
+    
+    /// Последняя клетка пригодная для объединения
     var lastMergableTile: Tile? = nil
     
+    // Перебираем ряды
     for i in 0..<config.tileNumber {
       lastZeroTile = nil
       lastMergableTile = nil
       
+      // Перебираем строки
       for j in 0..<config.tileNumber {
+        
+        // Определение ограничений для возможных движений
         let temp = direction == .forward ? (config.tileNumber - 1) - j : j
         let x = orientation == .horizon ? temp : i
         let y = orientation == .horizon ? i : temp
         let tile = tileList[x + y * config.tileNumber]
         
+        // Если плитка не пустая
         if !tile.isEmpty {
           
           if let mergableTile = lastMergableTile, mergableTile.value == tile.value {
@@ -157,6 +165,7 @@ class Board {
           }
           
           lastMergableTile = tile
+        // В противном случае
         } else {
           if lastZeroTile == nil {
             lastZeroTile = tile

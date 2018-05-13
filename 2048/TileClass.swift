@@ -22,6 +22,7 @@ class Tile: Equatable {
     return valueText.count
   }
   
+  /// Проверка на пустое значение плитки
   var isEmpty: Bool {
     return value == 0
   }
@@ -71,10 +72,12 @@ class Tile: Equatable {
     view.textColor = style.tileForegroundColor(value: value)
   }
   
+  /// Смещение
   func moveTo(position: Position) {
     self.position = position
   }
   
+  /// Слияние
   func mergeTo(position: Position) {
     moveTo(position: position)
     self.value += 1
@@ -99,12 +102,13 @@ class Tile: Equatable {
     letfConstraint?.isActive = true
   }
   
+  /// Удаление с доски после слияния
   func removeFromBoard() {
     self.view.removeFromSuperview()
   }
   
+  /// 
   func createPreviousEmptyTile(direction: Direction, orientation: Orientation) -> Tile {
-    // ToDo: rename to position?
     let pos = self.position.previousPosition(direction: direction, orientation: orientation)
     return Tile(value: 0, position: pos)
   }

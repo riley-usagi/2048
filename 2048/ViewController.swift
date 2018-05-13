@@ -8,12 +8,12 @@ enum Orientation {
 
 /// Шаг вперёд и назад
 enum Direction : Int {
-  case forward = 1
+  case forward  = 1
   case backward = -1
 }
 
-// Инициализируем настройки в формате переменых для удобства дальнейшего пользования
-let style = Style()
+// Инициализируем настройки в формате переменных для удобства дальнейшего пользования
+let style  = Style()
 let config = BoardSizeConfig()
 
 class ViewController: UIViewController {
