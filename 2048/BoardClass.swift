@@ -7,9 +7,16 @@ class Board {
   
   // Задаём изначальные настройки игровой площадки
   init() {
+    // Позиция отрисовки (левый верхний угол)
     boardView = UIView(frame: .zero)
+    
+    // Задний фон доски
     boardView.backgroundColor = style.boardBackgoundColor
+    
+    // Огругление углов доски
     boardView.layer.cornerRadius = 6
+    
+    // Не переводить авторазмеры в ограничения (не знаю как ещё это назвать =D)
     boardView.translatesAutoresizingMaskIntoConstraints = false
   }
   
@@ -26,6 +33,7 @@ class Board {
     return pointAt(x: position.x, y: position.y)
   }
   
+  /// Вывод доски на экран, со всевозможными ограничениями по краям
   func addTo(view: UIView) {
     view.addSubview(self.boardView)
     boardView.widthAnchor.constraint(equalToConstant: config.boardSize.width).isActive = true
@@ -34,7 +42,7 @@ class Board {
     boardView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
   }
   
-  /// Сообщение о проигрыше
+  /// Сообщение о проигрыше (необходимо вызвать метод в нужный момент)
   func gameOver() {
     // ToDo: add alert with action
     print("Game over")
@@ -73,6 +81,7 @@ class Board {
     tileArray.append(tile)
   }
   
+  /// Заполнение доски двумя первоначальными плитками
   func buildBoard() {
     for i in 0..<4 {
       for j in 0..<4 {

@@ -33,15 +33,19 @@ class ViewController: UIViewController {
     // Игровой процесс
     if let view = self.view {
       view.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-      view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+      // view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
       
+      // Обрабатываем "свайпы" по экрану
       for direction: UISwipeGestureRecognizerDirection in [.left, .right, .up, .down] {
         let gesture = UISwipeGestureRecognizer(target: self, action: #selector(swipe))
         gesture.direction = direction
         view.addGestureRecognizer(gesture)
       }
       
+      // Вывод заготовки под доску на экран
       board.addTo(view: view)
+      
+      // Вывод начальных плиток на доску
       board.buildBoard()
     }
     

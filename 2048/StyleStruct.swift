@@ -3,7 +3,9 @@ import UIKit
 /// Стили оформления игры
 struct Style {
   
+  /// Задний фон доски
   let boardBackgoundColor = #colorLiteral(red: 0.6823529412, green: 0.624, blue: 0.561, alpha: 1)
+  /// Цвет пустой плитки
   let emptyBackgroundColor = #colorLiteral(red: 0.561, green: 0.7058823529, blue: 0.639, alpha: 1)
   let tileBackgroundColors = [
     #colorLiteral(red: 0.7529411765, green: 0.7098039216, blue: 0.6509803922, alpha: 1), #colorLiteral(red: 0.9254901961, green: 0.8745098039, blue: 0.8196078431, alpha: 1), #colorLiteral(red: 0.9098039216, green: 0.8549019608, blue: 0.7490196078, alpha: 1), #colorLiteral(red: 0.9333333333, green: 0.6392156863, blue: 0.3960784314, alpha: 1),
