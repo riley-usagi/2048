@@ -3,16 +3,21 @@ import UIKit
 /// Плитка (элемент игры)
 class Tile: Equatable {
   
+  /// Значение плитки
   var value: Int = 0 {
+    // При изменении значения плитки - обновлять её визуальную часть
     didSet {
       updateView()
     }
   }
   
+  /// Текст плитки
   var valueText: String {
+    // Если в плитке 0 очков, то не выводить текст, в противном случае сумма удваивается и выводится на экран
     return value == 0 ? "" : "\(1 << value)"
   }
   
+  /// Разрядность числа
   var valueLength: Int {
     return valueText.count
   }
@@ -47,7 +52,7 @@ class Tile: Equatable {
     updateView()
   }
   
-  /// Размер шрифта в зависимости от разрядноси числа
+  /// Размер шрифта в зависимости от разрядности числа
   func fontSize(for length: Int) -> CGFloat {
     if length > 4 {
       return 18
