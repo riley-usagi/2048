@@ -107,9 +107,14 @@ class Board {
   
   /// Проверка возможности сдвига для каждой плитки на экране на данный момент
   func checkMovement(direction: Direction, orientation: Orientation) -> Bool {
+    
+    /// Значение сдвига
     var moved = false
+    
+    /// Начальный массив плиток
     var tileList = [Tile]()
     
+    //
     for y in 0..<config.tileNumber {
       for x in 0..<config.tileNumber {
         let tile = Tile(value: 0, position: Position(x: x, y: y))

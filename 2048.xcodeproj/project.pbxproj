@@ -15,7 +15,6 @@
 		BF7469A020A598C6000FFA2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF74699E20A598C6000FFA2A /* LaunchScreen.storyboard */; };
 		BFDE1E1020A850B3005137EE /* PositionStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDE1E0F20A850B3005137EE /* PositionStruct.swift */; };
 		BFDE1E1220A85151005137EE /* StyleStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDE1E1120A85151005137EE /* StyleStruct.swift */; };
-		BFDE1E1420A851DF005137EE /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDE1E1320A851DF005137EE /* Enums.swift */; };
 		BFDE1E1620A8528F005137EE /* BoardSizeConfigStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDE1E1520A8528F005137EE /* BoardSizeConfigStruct.swift */; };
 		BFDE1E1820A8531C005137EE /* TileClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDE1E1720A8531C005137EE /* TileClass.swift */; };
 /* End PBXBuildFile section */
@@ -31,7 +30,6 @@
 		BF7469A120A598C6000FFA2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFDE1E0F20A850B3005137EE /* PositionStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionStruct.swift; sourceTree = "<group>"; };
 		BFDE1E1120A85151005137EE /* StyleStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleStruct.swift; sourceTree = "<group>"; };
-		BFDE1E1320A851DF005137EE /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		BFDE1E1520A8528F005137EE /* BoardSizeConfigStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSizeConfigStruct.swift; sourceTree = "<group>"; };
 		BFDE1E1720A8531C005137EE /* TileClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,7 +72,6 @@
 				BF7469A120A598C6000FFA2A /* Info.plist */,
 				BFDE1E0F20A850B3005137EE /* PositionStruct.swift */,
 				BFDE1E1120A85151005137EE /* StyleStruct.swift */,
-				BFDE1E1320A851DF005137EE /* Enums.swift */,
 				BFDE1E1520A8528F005137EE /* BoardSizeConfigStruct.swift */,
 				BFDE1E1720A8531C005137EE /* TileClass.swift */,
 				BF5F041820A8554A00BEED1C /* BoardClass.swift */,
@@ -155,7 +152,6 @@
 			files = (
 				BF74699820A598C4000FFA2A /* ViewController.swift in Sources */,
 				BF5F041920A8554A00BEED1C /* BoardClass.swift in Sources */,
-				BFDE1E1420A851DF005137EE /* Enums.swift in Sources */,
 				BFDE1E1620A8528F005137EE /* BoardSizeConfigStruct.swift in Sources */,
 				BFDE1E1020A850B3005137EE /* PositionStruct.swift in Sources */,
 				BFDE1E1220A85151005137EE /* StyleStruct.swift in Sources */,
