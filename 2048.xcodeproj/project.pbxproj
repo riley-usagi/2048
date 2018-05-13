@@ -15,6 +15,7 @@
 		BFDE1E1020A850B3005137EE /* PositionStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDE1E0F20A850B3005137EE /* PositionStruct.swift */; };
 		BFDE1E1220A85151005137EE /* StyleStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDE1E1120A85151005137EE /* StyleStruct.swift */; };
 		BFDE1E1420A851DF005137EE /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDE1E1320A851DF005137EE /* Enums.swift */; };
+		BFDE1E1620A8528F005137EE /* BoardSizeConfigStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDE1E1520A8528F005137EE /* BoardSizeConfigStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		BFDE1E0F20A850B3005137EE /* PositionStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionStruct.swift; sourceTree = "<group>"; };
 		BFDE1E1120A85151005137EE /* StyleStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleStruct.swift; sourceTree = "<group>"; };
 		BFDE1E1320A851DF005137EE /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		BFDE1E1520A8528F005137EE /* BoardSizeConfigStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSizeConfigStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				BFDE1E0F20A850B3005137EE /* PositionStruct.swift */,
 				BFDE1E1120A85151005137EE /* StyleStruct.swift */,
 				BFDE1E1320A851DF005137EE /* Enums.swift */,
+				BFDE1E1520A8528F005137EE /* BoardSizeConfigStruct.swift */,
 			);
 			path = 2048;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			files = (
 				BF74699820A598C4000FFA2A /* ViewController.swift in Sources */,
 				BFDE1E1420A851DF005137EE /* Enums.swift in Sources */,
+				BFDE1E1620A8528F005137EE /* BoardSizeConfigStruct.swift in Sources */,
 				BFDE1E1020A850B3005137EE /* PositionStruct.swift in Sources */,
 				BFDE1E1220A85151005137EE /* StyleStruct.swift in Sources */,
 				BF74699620A598C4000FFA2A /* AppDelegate.swift in Sources */,
