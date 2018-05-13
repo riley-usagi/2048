@@ -1,6 +1,4 @@
 import UIKit
-// ToDo:
-import GameplayKit
 
 /// Формат положения экрана
 enum Orientation {
@@ -14,21 +12,7 @@ enum Direction : Int {
   case backward = -1
 }
 
-/// Положение плиток на доске
-struct Position : Equatable {
-  let x : Int
-  let y : Int
-  
-  /// Ищем предыдущую позицию в соответствии текущими направлением и ориентацией
-  func previousPosition(direction: Direction, orientation: Orientation) -> Position {
-    switch orientation {
-    case .vertical:
-      return Position(x: x, y: y - direction.rawValue)
-    case .horizon:
-      return Position(x: x - direction.rawValue, y: y)
-    }
-  }
-}
+
 
 func ==(lhs: Position, rhs: Position) -> Bool {
   return lhs.x == rhs.x && lhs.y == rhs.y
