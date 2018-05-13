@@ -53,6 +53,7 @@ class Board {
     tile.addTo(board: self)
   }
   
+  /// Генерация новой плитки на свободной позиции
   func generateTile() {
     guard tileArray.count <= config.tileCount else {
       print("Не влезет")
@@ -81,7 +82,7 @@ class Board {
     tileArray.append(tile)
   }
   
-  /// Заполнение доски двумя первоначальными плитками
+  /// Заполнение доски пустыми плитками и двумя первоначальными
   func buildBoard() {
     for i in 0..<4 {
       for j in 0..<4 {
@@ -92,6 +93,7 @@ class Board {
         boardView.layer.addSublayer(layer)
       }
     }
+    
     generateTile()
     generateTile()
   }
@@ -160,11 +162,16 @@ class Board {
     return moved
   }
   
+  /// Процесс сдвига конкретной плитки
   func moveTile(direction: Direction, orientation: Orientation) {
+    // Проверка на то, сдвинулись ли плитки (с учётом игровой возможности)
     let moved = checkMovement(direction: direction, orientation: orientation)
+    
+    // Анимация движения
     UIView.animate(withDuration: 0.1, animations: {
       self.boardView.layoutIfNeeded()
     }) { (_) in
+      // Если плитки успешно сдвинулись - генерируем новую плитку среди свободных
       if moved {
         self.generateTile()
       }

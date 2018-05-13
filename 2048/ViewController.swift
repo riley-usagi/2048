@@ -8,6 +8,7 @@ class ViewController: UIViewController {
   
   let board = Board()
   
+  // Обработка одного единственного возможного действия ("свайпа")
   @IBAction func swipe(recognizer: UIGestureRecognizer?) {
     guard let recognizer = recognizer as? UISwipeGestureRecognizer else {
       return
@@ -45,7 +46,7 @@ class ViewController: UIViewController {
       // Вывод заготовки под доску на экран
       board.addTo(view: view)
       
-      // Вывод начальных плиток на доску
+      // Вывод начальных плиток на доску (включая первоначальные две)
       board.buildBoard()
     }
     
