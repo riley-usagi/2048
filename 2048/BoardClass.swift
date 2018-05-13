@@ -105,6 +105,7 @@ class Board {
     }
   }
   
+  /// Проверка возможности сдвига для каждой плитки на экране на данный момент
   func checkMovement(direction: Direction, orientation: Orientation) -> Bool {
     var moved = false
     var tileList = [Tile]()

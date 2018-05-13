@@ -15,12 +15,20 @@ class ViewController: UIViewController {
     }
     
     switch recognizer.direction {
+    
+    // Свайп вправо. Движение плиток вперёд по горизонтали
     case UISwipeGestureRecognizerDirection.right:
       board.moveTile(direction: .forward, orientation: .horizon)
+    
+    // Свайп влево. Движение плиток назад по горизонтали
     case UISwipeGestureRecognizerDirection.left:
       board.moveTile(direction: .backward, orientation: .horizon)
+    
+    // Свайп вверх. Движение плиток назад по вертикали (вверх)
     case UISwipeGestureRecognizerDirection.up:
       board.moveTile(direction: .backward, orientation: .vertical)
+    
+    // Свайп вниз. Движение плиток вперёд по вертикали (вниз)
     case UISwipeGestureRecognizerDirection.down:
       board.moveTile(direction: .forward, orientation: .vertical)
     default:

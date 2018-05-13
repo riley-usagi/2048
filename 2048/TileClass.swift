@@ -63,6 +63,7 @@ class Tile: Equatable {
     }
   }
   
+  /// Обновление внешнего вида плитки (цвет и текст)
   func updateView() {
     view.text = valueText
     view.font = UIFont.boldSystemFont(ofSize: fontSize(for: valueLength))

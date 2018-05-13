@@ -1,6 +1,6 @@
 import Foundation
 
-/// Формат положения экрана
+/// Направление по вертикали/горизонтали
 enum Orientation {
   case vertical
   case horizon
