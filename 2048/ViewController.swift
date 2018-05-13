@@ -4,7 +4,6 @@ import UIKit
 let style = Style()
 let config = BoardSizeConfig()
 
-
 class ViewController: UIViewController {
   
   let board = Board()
@@ -33,7 +32,7 @@ class ViewController: UIViewController {
     
     // Игровой процесс
     if let view = self.view {
-      view.backgroundColor = UIColor(white: 1.0, alpha: 1)
+      view.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
       view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
       
       for direction: UISwipeGestureRecognizerDirection in [.left, .right, .up, .down] {
